@@ -1,0 +1,55 @@
+@import "../sass/Utils/mixins";
+@import "../sass/Utils/variables";
+
+
+body{
+    font-family: sans-serif;
+}
+
+header{
+    @include flexbox;
+    margin: 1rem;
+    img{
+        height:2rem;
+    }
+}
+
+.card{
+    @include flexbox;
+    border: 1px solid grey;
+    background-color: $color-card;
+    text-align: center;
+    margin: 1rem 4rem;
+
+    &__titre{
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: $color-titre-card;
+        width: 100%;
+        font-weight: bold 0.8;
+
+        i{
+         padding: 1rem;
+        }
+    }
+}
+
+.card{
+    &-content{
+        padding: 0 2rem;
+    }
+
+}
+
+.btn{
+    @include button;
+   
+}
+
+.function{
+    @include flexbox
+}
+
+
+
