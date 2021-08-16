@@ -1,5 +1,15 @@
 body {
   font-family: sans-serif;
+  margin: 0;
+}
+
+body a {
+  text-decoration: none;
+  color: black;
+}
+
+body li {
+  list-style: none;
 }
 
 header {
@@ -40,7 +50,7 @@ header img {
   border: 1px solid grey;
   background-color: #f8f8f8;
   text-align: center;
-  margin: 1rem 4rem;
+  margin: 1rem 1rem;
 }
 
 .card__titre {
@@ -132,7 +142,7 @@ header img {
   position: relative;
   margin: 1rem;
   background-color: #d6d2d2;
-  width: 18rem;
+  width: 100%;
   padding: .8rem .8rem .8rem .9rem;
   border-radius: 20px;
   -webkit-box-shadow: 5px 5px 3px 3px #F2F2F2;
@@ -175,11 +185,12 @@ header img {
 .restaurant-card {
   background-color: #FFFF;
   border-radius: 20px;
+  width: 90%;
 }
 
 .restaurant-card img {
-  height: 300px;
   width: 100%;
+  height: 170px;
   -o-object-fit: cover;
      object-fit: cover;
   border-top-left-radius: 20px;
@@ -195,17 +206,22 @@ header img {
 }
 
 .restaurant-card figcaption h3 {
+  margin-top: 0.5rem;
   padding-bottom: 0;
   margin-bottom: 0;
 }
 
 .restaurant-card figcaption p {
   margin-top: .2rem;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
 }
 
-.restaurant-card figcaption i {
+.heart-container {
   -ms-grid-column: 2;
       grid-column-start: 2;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
   text-align: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -213,8 +229,28 @@ header img {
   font-size: 2rem;
   -ms-grid-row-span: 2;
       grid-row-end: span 2;
-  padding-top: 1.5rem;
-  padding-left: 4rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
   opacity: .4;
+  position: relative;
+}
+
+.heart-container .fas {
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+
+footer {
+  background-color: #1f1f1f;
+  margin-top: 0;
+}
+
+footer ul, footer h2 {
+  margin-top: 0;
+}
+
+footer li, footer a {
+  color: #FFFF;
 }
 /*# sourceMappingURL=main.css.map */
