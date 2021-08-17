@@ -6,6 +6,13 @@
     
 }
 
+@mixin  flexbox-bigscreen {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+
 @mixin button {
 
     border: none;

@@ -1,5 +1,54 @@
+@media screen and (min-width: 500px) {
+  #restaurant-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .function {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+}
+
+@-webkit-keyframes new {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes new {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
 }
 
@@ -10,6 +59,11 @@ body a {
 
 body li {
   list-style: none;
+}
+
+body h2 {
+  font-family: 'Shrikhand', cursive;
+  font-weight: normal;
 }
 
 header {
@@ -165,7 +219,7 @@ header img {
   color: #FFFF;
 }
 
-.restaurant-container {
+#restaurant-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -218,8 +272,12 @@ header img {
 }
 
 .heart-container {
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -ms-grid-column: 2;
       grid-column-start: 2;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
   -ms-grid-row: 1;
       grid-row-start: 1;
   text-align: center;
@@ -231,19 +289,74 @@ header img {
       grid-row-end: span 2;
   padding-top: 1rem;
   padding-left: 1rem;
-  opacity: .4;
   position: relative;
+}
+
+.heart-container .input-heart {
+  height: 2.1rem;
+  width: 2.1rem;
+  bottom: 12px;
+  right: 27px;
+  position: absolute;
+  z-index: 3;
+  opacity: 0;
+  cursor: pointer;
 }
 
 .heart-container .fas {
   position: absolute;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  bottom: 15px;
+  right: 30px;
+  opacity: 0;
+}
+
+.heart-container .far {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+  opacity: .5;
+}
+
+.input-heart:checked ~ .far {
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.input-heart:checked ~ .fas {
+  opacity: 1;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.new-card {
+  position: relative;
+}
+
+.new-card::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: #99e2d0;
+  height: 1.4rem;
+  font-size: 1rem;
+  width: 4rem;
+  color: #278870;
+  top: 1rem;
+  right: 1.5rem;
+  padding: .3rem;
+  -webkit-animation: new 2s linear infinite;
+          animation: new 2s linear infinite;
 }
 
 footer {
   background-color: #1f1f1f;
   margin-top: 0;
+  padding-bottom: 1rem;
 }
 
 footer ul, footer h2 {
@@ -252,5 +365,23 @@ footer ul, footer h2 {
 
 footer li, footer a {
   color: #FFFF;
+  margin-top: .7rem;
+}
+
+/*Second page*/
+.header-restaurants {
+  position: relative;
+}
+
+.header-restaurants a {
+  position: absolute;
+  left: 2rem;
+}
+
+.picture img {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=main.css.map */

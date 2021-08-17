@@ -1,0 +1,12 @@
+@import "../Utils/mixins";
+
+
+@media screen and (min-width: 500px){
+
+    #restaurant-container{
+        @include flexbox-bigscreen;
+    }
+    .function{
+        @include flexbox-bigscreen;
+    }
+}
