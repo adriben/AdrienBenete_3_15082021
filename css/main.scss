@@ -7,6 +7,7 @@
 body{
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    
     a {
         text-decoration: none;
         color: black;
@@ -22,6 +23,67 @@ body{
    
 }
 
+.loader{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    visibility: hidden;
+    animation: disapear 5s linear;
+
+
+
+    &__spinner{
+       position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: solid 3px transparent;
+        border-top-color: $color-primary ;
+        border-bottom-color: $color-secondary;
+        top: 30%;
+        left: 45%;
+        animation: loading 1s linear infinite ;
+
+        
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 3px solid transparent;
+            border-radius: 50px;
+            border-top-color: $color-tertiary;
+            border-bottom-color:$color-tertiary ;
+            animation: loading 2s linear reverse infinite;
+
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            right: 18px;
+            bottom: 18px;
+            border: 3px solid;
+            border-color: transparent;
+            border-radius: 50px;
+            
+        }
+
+
+       
+    }
+
+}
 
 
 header{
@@ -239,5 +301,50 @@ footer{
     height: 300px;
     width: 100%;
     object-fit: cover;
+    position: relative;
     }
+}
+.menu{
+        background-color: rgb(173, 173, 173);
+        margin-top: -60px;
+      position: absolute;
+      width: 100%;
+      border-top-right-radius: 30px;
+      border-top-left-radius: 30px;
+      
+}
+.menu-header{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
+       
+       h2{
+           margin-bottom: .90rem;
+       }
+     
+    .heart-container{
+        padding: 0 ;
+
+    }
+}
+.menu-items__choice{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #FFFF;
+    border-radius: 15px;
+    width: 95%;
+    height: 5rem;
+    margin: .75rem;
+
+    h4{
+        margin: .9rem 0 0 .9rem;
+    }
+    p{
+        margin: .3rem 0 .3rem .9rem;
+    }
+   span{
+       margin: 3rem 1rem 0 0;
+   }
 }
