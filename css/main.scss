@@ -22,6 +22,9 @@ body{
     }
    
 }
+main{
+    margin-bottom: 0;
+}
 
 .loader{
     position: fixed;
@@ -282,7 +285,7 @@ footer{
     }
     li, a{
         color: #FFFF;
-        margin-top: .7rem;
+        margin-top: 0;
     }
 }
 
@@ -301,16 +304,18 @@ footer{
     height: 300px;
     width: 100%;
     object-fit: cover;
+    z-index: -1;
     position: relative;
     }
 }
 .menu{
-        background-color: rgb(218, 216, 216);
-        margin-top: -60px;
-      position: absolute;
+        background-color: rgb(246, 246, 246);
+       margin-top: -60px;
       width: 100%;
       border-top-right-radius: 30px;
       border-top-left-radius: 30px;
+      
+    
 
     &-items h3{
         margin-left: 1.5rem;
@@ -377,7 +382,7 @@ footer{
 .menu-items__choice__description{
     display: inline-block;
     overflow: hidden;
-    width: 85%;
+    width: 80%;
     white-space:nowrap;
     text-overflow: ellipsis;
 }
@@ -411,9 +416,19 @@ footer{
             }
         }
         .menu-items__choice__description{
-            width: 70%;
+            width: 60%;
             transition: 600ms;
         } 
     }
 
+}
+
+.order-button{
+
+    @include flexbox;
+    margin: 2rem 0 0 0;
+
+     .btn{
+         width: 200px;
+     }
 }
