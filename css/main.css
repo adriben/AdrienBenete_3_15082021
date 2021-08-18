@@ -97,6 +97,81 @@
   }
 }
 
+@-webkit-keyframes validated {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@keyframes validated {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: 0%;
+  }
+  100% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+    display: -webkit-box;
+    display: flex;
+    width: 15%;
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: 0%;
+  }
+  100% {
+    -webkit-transform: translateX(1);
+            transform: translateX(1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 15%;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -493,12 +568,29 @@ footer li, footer a {
 }
 
 .menu {
-  background-color: #adadad;
+  background-color: #dad8d8;
   margin-top: -60px;
   position: absolute;
   width: 100%;
   border-top-right-radius: 30px;
   border-top-left-radius: 30px;
+}
+
+.menu-items h3 {
+  margin-left: 1.5rem;
+  position: relative;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.menu-items h3::after {
+  content: "";
+  height: 3px;
+  width: 40px;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 25px;
+  left: 0px;
 }
 
 .menu-header {
@@ -510,7 +602,7 @@ footer li, footer a {
 }
 
 .menu-header h2 {
-  margin-bottom: .90rem;
+  margin: .90rem 1rem;
 }
 
 .menu-header .heart-container {
@@ -521,6 +613,8 @@ footer li, footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -528,12 +622,12 @@ footer li, footer a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #FFFF;
   border-radius: 15px;
-  width: 95%;
-  height: 5rem;
+  height: 4rem;
   margin: .75rem;
 }
 
@@ -543,9 +637,61 @@ footer li, footer a {
 
 .menu-items__choice p {
   margin: .3rem 0 .3rem .9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu-items__choice span {
-  margin: 3rem 1rem 0 0;
+  font-weight: bold;
+  margin: 1rem 1rem 0 0.5rem;
+}
+
+.menu-items__choice__description {
+  display: inline-block;
+  overflow: hidden;
+  width: 85%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.animation-menu {
+  background-color: #99E2D0;
+  width: 3rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  color: #FFFF;
+  border-radius: 0 15px 15px 0;
+  display: none;
+}
+
+.menu-items__choice:hover .animation-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: slide-left 600ms linear both;
+          animation: slide-left 600ms linear both;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  overflow: hidden;
+}
+
+.menu-items__choice:hover .animation-menu i {
+  -webkit-animation: rotation 800ms;
+          animation: rotation 800ms;
+}
+
+.menu-items__choice:hover .menu-items__choice__description {
+  width: 70%;
+  -webkit-transition: 600ms;
+  transition: 600ms;
 }
 /*# sourceMappingURL=main.css.map */

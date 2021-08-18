@@ -305,12 +305,30 @@ footer{
     }
 }
 .menu{
-        background-color: rgb(173, 173, 173);
+        background-color: rgb(218, 216, 216);
         margin-top: -60px;
       position: absolute;
       width: 100%;
       border-top-right-radius: 30px;
       border-top-left-radius: 30px;
+
+    &-items h3{
+        margin-left: 1.5rem;
+        position: relative;
+        font-weight: normal;
+        text-transform: uppercase;
+
+        &::after{
+            content: "";
+            height: 3px;
+            width: 40px;
+            background-color: $color-tertiary;
+            position: absolute;
+            top: 25px;
+            left: 0px;
+        }
+
+    }
       
 }
 .menu-header{
@@ -319,7 +337,7 @@ footer{
     width: 100%;
        
        h2{
-           margin-bottom: .90rem;
+           margin: .90rem 1rem;
        }
      
     .heart-container{
@@ -329,22 +347,73 @@ footer{
 }
 .menu-items__choice{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    align-content: center;
+    align-items: center;
     background-color: #FFFF;
     border-radius: 15px;
-    width: 95%;
-    height: 5rem;
+    height: 4rem;
     margin: .75rem;
+     
+
+    
 
     h4{
         margin: .9rem 0 0 .9rem;
     }
     p{
         margin: .3rem 0 .3rem .9rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        
     }
    span{
-       margin: 3rem 1rem 0 0;
+       font-weight: bold;
+       margin: 1rem 1rem 0 0.5rem;
    }
+}
+
+.menu-items__choice__description{
+    display: inline-block;
+    overflow: hidden;
+    width: 85%;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+
+.animation-menu{
+    background-color: $color-tertiary;
+    width: 3rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #FFFF;
+    border-radius: 0 15px 15px 0;
+    display: none;
+    
+    
+}
+
+.menu-items__choice{
+
+    &:hover{
+        .animation-menu{
+           display: flex;
+            animation: slide-left 600ms linear both;
+            transform-origin: right;
+            overflow: hidden;
+            i{
+                animation: rotation 800ms;
+
+            }
+        }
+        .menu-items__choice__description{
+            width: 70%;
+            transition: 600ms;
+        } 
+    }
+
 }
