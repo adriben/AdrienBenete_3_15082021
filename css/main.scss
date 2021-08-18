@@ -411,7 +411,7 @@ footer{
             transform-origin: right;
             overflow: hidden;
             i{
-                animation: rotation 800ms;
+                animation: rotation 600ms linear;
 
             }
         }

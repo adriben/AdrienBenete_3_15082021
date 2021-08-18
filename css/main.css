@@ -689,8 +689,8 @@ footer li, footer a {
 }
 
 .menu-items__choice:hover .animation-menu i {
-  -webkit-animation: rotation 800ms;
-          animation: rotation 800ms;
+  -webkit-animation: rotation 600ms linear;
+          animation: rotation 600ms linear;
 }
 
 .menu-items__choice:hover .menu-items__choice__description {
