@@ -172,6 +172,38 @@
   }
 }
 
+@-webkit-keyframes slow-display {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slow-display {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -207,8 +239,8 @@ main {
   display: -ms-flexbox;
   display: flex;
   visibility: hidden;
-  -webkit-animation: disapear 5s linear;
-          animation: disapear 5s linear;
+  -webkit-animation: disapear 2s linear;
+          animation: disapear 2s linear;
 }
 
 .loader__spinner {
@@ -541,7 +573,7 @@ header img {
 footer {
   background-color: #1f1f1f;
   margin-top: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 footer ul, footer h2 {
@@ -681,22 +713,42 @@ footer li, footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-animation: slide-left 600ms linear both;
-          animation: slide-left 600ms linear both;
+  -webkit-animation: slide-left 400ms linear both;
+          animation: slide-left 400ms linear both;
   -webkit-transform-origin: right;
           transform-origin: right;
   overflow: hidden;
 }
 
 .menu-items__choice:hover .animation-menu i {
-  -webkit-animation: rotation 600ms linear;
-          animation: rotation 600ms linear;
+  -webkit-animation: rotation 400ms linear;
+          animation: rotation 400ms linear;
 }
 
 .menu-items__choice:hover .menu-items__choice__description {
   width: 60%;
-  -webkit-transition: 600ms;
-  transition: 600ms;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+}
+
+.first-choice {
+  -webkit-animation: slow-display linear 500ms;
+          animation: slow-display linear 500ms;
+}
+
+.second-choice {
+  -webkit-animation: slow-display linear 600ms;
+          animation: slow-display linear 600ms;
+}
+
+.third-choice {
+  -webkit-animation: slow-display linear 700ms;
+          animation: slow-display linear 700ms;
+}
+
+.forth-choice {
+  -webkit-animation: slow-display linear 1s;
+          animation: slow-display linear 1s;
 }
 
 .order-button {

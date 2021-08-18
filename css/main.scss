@@ -36,7 +36,7 @@ main{
     background-color: rgba(255, 255, 255, 0.9);
     display: flex;
     visibility: hidden;
-    animation: disapear 5s linear;
+    animation: disapear 2s linear;
 
 
 
@@ -279,7 +279,7 @@ header{
 footer{
     background-color: rgb(31, 31, 31);
     margin-top: 0;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
     ul, h2{
        margin-top: 0;
     }
@@ -360,10 +360,6 @@ footer{
     border-radius: 15px;
     height: 4rem;
     margin: .75rem;
-     
-
-    
-
     h4{
         margin: .9rem 0 0 .9rem;
     }
@@ -407,20 +403,32 @@ footer{
     &:hover{
         .animation-menu{
            display: flex;
-            animation: slide-left 600ms linear both;
+            animation: slide-left 400ms linear both;
             transform-origin: right;
             overflow: hidden;
             i{
-                animation: rotation 600ms linear;
+                animation: rotation 400ms linear;
 
             }
         }
         .menu-items__choice__description{
             width: 60%;
-            transition: 600ms;
+            transition: 400ms;
         } 
     }
 
+}
+.first-choice{
+    animation: slow-display linear 500ms;
+}
+.second-choice{
+    animation: slow-display linear 600ms;
+}
+.third-choice{
+    animation:slow-display linear 700ms;
+}
+.forth-choice{
+    animation: slow-display linear 1s;
 }
 
 .order-button{
@@ -432,3 +440,5 @@ footer{
          width: 200px;
      }
 }
+
+
