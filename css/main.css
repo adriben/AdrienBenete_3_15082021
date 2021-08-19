@@ -206,7 +206,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1600px;
 }
 
 body a {
@@ -395,6 +396,21 @@ header img {
   border-radius: 20px;
 }
 
+@media screen and (min-width: 1200px) {
+  .functionality {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 70%;
+  }
+}
+
 .functionality__element {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -437,26 +453,45 @@ header img {
 }
 
 #restaurant-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   background-color: #f8f8f8;
+}
+
+@media screen and (min-width: 800px) {
+  #restaurant-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 4fr 4fr;
+        grid-template-rows: 1fr 4fr 4fr;
+  }
+  #restaurant-container .new-card {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+  #restaurant-container .a-la-francaise {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+  }
+}
+
+h1 {
+  margin-left: 1rem;
 }
 
 .restaurant-card {
   background-color: #FFFF;
   border-radius: 20px;
-  width: 90%;
+  margin: 1rem;
 }
 
 .restaurant-card img {
@@ -680,6 +715,22 @@ footer li, footer a {
 .menu-items__choice span {
   font-weight: bold;
   margin: 1rem 1rem 0 0.5rem;
+}
+
+@media screen and (min-width: 800px) {
+  .menu-items {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .menu-items__choice {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+  }
 }
 
 .menu-items__choice__description {

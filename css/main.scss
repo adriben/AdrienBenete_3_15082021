@@ -6,7 +6,8 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    margin: 0;
+    margin: 0 auto;
+    max-width: 1600px;
     
     a {
         text-decoration: none;
@@ -132,12 +133,20 @@ header{
 }
 
 .function{
-    @include flexbox
+    @include flexbox;
+    
 }
 
 .functionality{
     @include flexbox;
     border-radius: 20px;
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        
+    }
     
     &__element{
         @include icon-flex;
@@ -169,13 +178,36 @@ header{
     color: #FFFF;
 }
 #restaurant-container{
-    @include flexbox;
-    background-color: $color-card
+   display: grid;
+   justify-content: center;
+   grid-template-columns: 1fr;
+    background-color: $color-card;
+    @media screen and (min-width: 800px)  {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 4fr 4fr;
+
+        
+        .new-card{
+            grid-column-start: 1;
+        }
+       .a-la-francaise{
+           grid-row-start: 2;
+           grid-column-start: 2;
+       }
+    
+       
+       
+    }
+}
+h1{
+    margin-left: 1rem;
 }
 .restaurant-card{
     background-color: #FFFF;
     border-radius: 20px;
-    width: 90%;
+    margin: 1rem;
+
 
     img{
        
@@ -282,11 +314,14 @@ footer{
     padding-bottom: 2rem;
     ul, h2{
        margin-top: 0;
+       
     }
     li, a{
         color: #FFFF;
         margin-top: 0;
     }
+   
+    
 }
 
 /*Second page*/
@@ -374,6 +409,16 @@ footer{
        margin: 1rem 1rem 0 0.5rem;
    }
 }
+@media screen and (min-width: 800px){
+.menu-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+
+ &__choice{
+     grid-row-start:2 ;
+ }
+}}
 
 .menu-items__choice__description{
     display: inline-block;
