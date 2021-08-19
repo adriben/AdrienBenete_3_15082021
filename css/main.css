@@ -302,7 +302,7 @@ header {
 }
 
 header img {
-  height: 20rem;
+  height: 2rem;
 }
 
 .card {
@@ -387,7 +387,7 @@ header img {
 }
 
 .function h1 {
-  margin-left: -12rem;
+  margin-left: -30%;
 }
 
 .functionality {
@@ -405,6 +405,7 @@ header img {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 20px;
+  padding-left: 0;
   width: 75%;
 }
 
@@ -459,7 +460,7 @@ header img {
   position: absolute;
   top: 25px;
   left: -15px;
-  padding: .5rem .75rem;
+  padding: .45rem .75rem;
   border-radius: 50px;
   color: #FFFF;
 }
@@ -789,7 +790,7 @@ footer li, footer a {
 }
 
 .menu-items__choice:hover .menu-items__choice__description {
-  width: 60%;
+  width: 70%;
   -webkit-transition: 400ms;
   transition: 400ms;
 }

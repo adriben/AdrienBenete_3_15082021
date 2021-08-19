@@ -94,7 +94,7 @@ header{
     @include flexbox;
     margin: 1rem;
     img{
-        height:20rem;
+        height:2rem;
     }
 }
 
@@ -136,8 +136,9 @@ header{
 
 .function{
     @include flexbox;
+
     h1{
-        margin-left: -12rem;
+        margin-left: -30%;
     }
     
 }
@@ -145,6 +146,7 @@ header{
 .functionality{
     @include flexbox;
     border-radius: 20px;
+    padding-left: 0;
     width: 75%;
     @media screen and (min-width: 1200px) {
         flex-direction: row;
@@ -179,7 +181,7 @@ header{
     position: absolute;
     top: 25px;
     left:-15px;
-    padding: .5rem .75rem;
+    padding: .45rem .75rem;
     border-radius: 50px;
     color: #FFFF;
 }
@@ -464,7 +466,7 @@ footer{
             }
         }
         .menu-items__choice__description{
-            width: 60%;
+            width: 70%;
             transition: 400ms;
         } 
     }
