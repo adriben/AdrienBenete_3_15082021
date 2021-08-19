@@ -94,16 +94,16 @@ header{
     @include flexbox;
     margin: 1rem;
     img{
-        height:2rem;
+        height:20rem;
     }
 }
 
 .card{
     @include flexbox;
-    border: 1px solid grey;
-    background-color: $color-card;
+    background-color: $color-background-grey;
     text-align: center;
-    margin: 1rem 1rem;
+    margin: 1rem 0;
+    width: 100%;
 
     &__titre{
         @include icon-flex;
@@ -126,20 +126,26 @@ header{
 
 .btn{
     @include button;
+    
     &:hover{
         cursor: pointer;
+        @include opacity;
     }
    
 }
 
 .function{
     @include flexbox;
+    h1{
+        margin-left: -12rem;
+    }
     
 }
 
 .functionality{
     @include flexbox;
     border-radius: 20px;
+    width: 75%;
     @media screen and (min-width: 1200px) {
         flex-direction: row;
         justify-content: space-around;
@@ -344,7 +350,7 @@ footer{
     }
 }
 .menu{
-        background-color: rgb(246, 246, 246);
+        background-color: $color-background-grey;
        margin-top: -60px;
       width: 100%;
       border-top-right-radius: 30px;
