@@ -453,6 +453,7 @@ header img {
   border-radius: 20px;
   -webkit-box-shadow: 3px 3px 1px 1px #F2F2F2;
           box-shadow: 3px 3px 1px 1px #F2F2F2;
+  font-weight: bold;
 }
 
 .functionality__element:hover {
@@ -475,6 +476,14 @@ header img {
   padding: .45rem .75rem;
   border-radius: 50px;
   color: #FFFF;
+}
+
+.functionality--store {
+  background-color: #f5edff;
+}
+
+.functionality--store i {
+  color: #9356DC;
 }
 
 #restaurant-container {
