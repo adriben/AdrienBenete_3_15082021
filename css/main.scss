@@ -50,8 +50,8 @@ main{
         border-top-color: $color-primary ;
         border-bottom-color: $color-secondary;
         top: 30%;
-        left: 45%;
-        animation: loading 1s linear infinite ;
+        left: 40%;
+        animation: loading 1s linear infinite;
 
         
 
@@ -81,10 +81,7 @@ main{
             border-color: transparent;
             border-radius: 50px;
             
-        }
-
-
-       
+        }  
     }
 
 }
@@ -110,6 +107,7 @@ header{
         background-color: $color-titre-card;
         width: 100%;
         font-weight: bold 0.8;
+        
 
         i{
          padding: 1rem;
@@ -139,6 +137,10 @@ header{
 
     h1{
         margin-left: -30%;
+        @media screen and (min-width: 800px) {
+            margin-left: 0;
+  
+        }
     }
     
 }
@@ -166,7 +168,11 @@ header{
         width: 100%;
         padding: .8rem .8rem .8rem .9rem;
         border-radius: 20px;
-        box-shadow: 5px 5px 3px 3px #F2F2F2;        
+        box-shadow: 3px 3px 1px 1px #F2F2F2;
+        &:hover{
+            background: lighten($color-titre-card, 5%);
+            box-shadow: 5px 5px 2px 2px #F2F2F2;
+        }        
         i{
             padding: 1rem;
            }
@@ -215,6 +221,10 @@ h1{
     background-color: #FFFF;
     border-radius: 20px;
     margin: 1rem;
+    &:hover{
+        transform: scale(1.02);
+        transition: 1s;
+    }
 
 
     img{
@@ -329,7 +339,15 @@ footer{
         margin-top: .5rem;
         
     }
-   
+   @media screen and (min-width: 700px) {
+       ul{
+       display: grid;
+       text-align: center;
+       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        padding: 2rem 0 0 0 ; 
+        }
+    }
+  
     
 }
 
