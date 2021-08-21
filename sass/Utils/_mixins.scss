@@ -7,16 +7,13 @@
 
 @mixin lighten ($color:$color-titre-card){
     &:hover{
-        $color: lighten($color, 20%)
-        
-        
+        $color: lighten($color, 25%)
     }
 }
 
 @mixin opacity {
     opacity: 0.7;
-    transition: .4s;
-    box-shadow: 0px 0px 8px;
+    box-shadow: 0px 0px 6px;
     
 }
 @mixin  flexbox-bigscreen {

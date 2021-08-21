@@ -253,7 +253,7 @@ main {
   border-top-color: #9356DC;
   border-bottom-color: #FF79DA;
   top: 30%;
-  left: 40%;
+  left: 45%;
   -webkit-animation: loading 1s linear infinite;
           animation: loading 1s linear infinite;
 }
@@ -364,10 +364,8 @@ header img {
 .btn:hover {
   cursor: pointer;
   opacity: 0.7;
-  -webkit-transition: .4s;
-  transition: .4s;
-  -webkit-box-shadow: 0px 0px 8px;
-          box-shadow: 0px 0px 8px;
+  -webkit-box-shadow: 0px 0px 6px;
+          box-shadow: 0px 0px 6px;
 }
 
 .function {
@@ -458,8 +456,8 @@ header img {
 
 .functionality__element:hover {
   background: #f7f7f7;
-  -webkit-box-shadow: 5px 5px 2px 2px #F2F2F2;
-          box-shadow: 5px 5px 2px 2px #F2F2F2;
+  -webkit-box-shadow: 0px 0px 6px;
+          box-shadow: 0px 0px 6px;
 }
 
 .functionality__element i {
@@ -478,11 +476,17 @@ header img {
   color: #FFFF;
 }
 
-.functionality--store {
+#purple-store {
   background-color: #f5edff;
 }
 
-.functionality--store i {
+#purple-store:hover {
+  opacity: 0.7;
+  -webkit-box-shadow: 0px 0px 6px;
+          box-shadow: 0px 0px 6px;
+}
+
+#purple-store i {
   color: #9356DC;
 }
 
@@ -526,13 +530,13 @@ h1 {
   background-color: #FFFF;
   border-radius: 20px;
   margin: 1rem;
+  -webkit-box-shadow: 0 2px 6px #c5c5c5;
+          box-shadow: 0 2px 6px #c5c5c5;
 }
 
 .restaurant-card:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-box-shadow: 0 2px 6px #9356DC;
+          box-shadow: 0 2px 6px #9356DC;
 }
 
 .restaurant-card img {
@@ -542,6 +546,12 @@ h1 {
      object-fit: cover;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+@media screen and (min-width: 800px) {
+  .restaurant-card img {
+    height: 300px;
+  }
 }
 
 .restaurant-card figcaption {
@@ -629,6 +639,11 @@ h1 {
 
 .new-card {
   position: relative;
+}
+
+.new-card:hover {
+  -webkit-box-shadow: 0 2px 8px #99E2D0;
+          box-shadow: 0 2px 8px #99E2D0;
 }
 
 .new-card::before {
@@ -769,8 +784,8 @@ footer li, footer a {
   margin: 1rem 1rem 0 0.5rem;
 }
 
-@media screen and (min-width: 800px) {
-  .menu-items {
+@media screen and (min-width: 1100px) {
+  .menu-wraper {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 1fr;
@@ -779,7 +794,7 @@ footer li, footer a {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .menu-items__choice {
+  .menu-wraper__choice {
     -ms-grid-row: 2;
         grid-row-start: 2;
   }
@@ -810,6 +825,10 @@ footer li, footer a {
   color: #FFFF;
   border-radius: 0 15px 15px 0;
   display: none;
+}
+
+.menu-items__choice:hover span {
+  margin: 1rem 0 0 0.5rem;
 }
 
 .menu-items__choice:hover .animation-menu {

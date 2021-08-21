@@ -3,12 +3,10 @@
 @import "../sass/Layout/mediaqueries";
 @import "../sass/Utils/keyframes";
 
-
 body{
     font-family: 'Roboto', sans-serif;
     margin: 0 auto;
     max-width: 1600px;
-    
     a {
         text-decoration: none;
         color: black;
@@ -16,13 +14,12 @@ body{
     li{
         list-style: none;
     }
-
     h2{
      font-family: 'Shrikhand', cursive;
      font-weight: normal;
-    }
-   
+    } 
 }
+
 main{
     margin-bottom: 0;
 }
@@ -38,9 +35,6 @@ main{
     display: flex;
     visibility: hidden;
     animation: disapear 2s linear;
-
-
-
     &__spinner{
        position: relative;
         width: 50px;
@@ -50,11 +44,8 @@ main{
         border-top-color: $color-primary ;
         border-bottom-color: $color-secondary;
         top: 30%;
-        left: 40%;
+        left: 45%;
         animation: loading 1s linear infinite;
-
-        
-
         &::after{
             content: "";
             position: absolute;
@@ -67,9 +58,7 @@ main{
             border-top-color: $color-tertiary;
             border-bottom-color:$color-tertiary ;
             animation: loading 2s linear reverse infinite;
-
         }
-
         &::before{
             content: "";
             position: absolute;
@@ -79,13 +68,10 @@ main{
             bottom: 18px;
             border: 3px solid;
             border-color: transparent;
-            border-radius: 50px;
-            
+            border-radius: 50px; 
         }  
     }
-
 }
-
 
 header{
     @include flexbox;
@@ -107,8 +93,6 @@ header{
         background-color: $color-titre-card;
         width: 100%;
         font-weight: bold 0.8;
-        
-
         i{
          padding: 1rem;
         }
@@ -119,30 +103,24 @@ header{
     &-content{
         padding: 0 2rem;
     }
-
 }
 
 .btn{
-    @include button;
-    
+    @include button; 
     &:hover{
         cursor: pointer;
         @include opacity;
     }
-   
 }
 
 .function{
     @include flexbox;
-
     h1{
         margin-left: -30%;
         @media screen and (min-width: 800px) {
             margin-left: 0;
-  
         }
-    }
-    
+    }   
 }
 
 .functionality{
@@ -155,7 +133,6 @@ header{
         justify-content: space-around;
         align-items: center;
         width: 70%;
-        
     }
     
     &__element{
@@ -172,12 +149,11 @@ header{
         font-weight: bold;
         &:hover{
             background: lighten($color-titre-card, 5%);
-            box-shadow: 5px 5px 2px 2px #F2F2F2;
+            box-shadow: 0px 0px 6px;
         }        
         i{
             padding: 1rem;
            }
-
     }
 }
 
@@ -192,8 +168,12 @@ header{
     border-radius: 50px;
     color: #FFFF;
 }
-.functionality--store{
-    background-color: rgba(245, 237, 255, 1);
+
+#purple-store{
+    background-color: $color-background-store;
+    &:hover{
+        @include opacity;
+    }
     i{
         color: $color-primary;
     }
@@ -208,47 +188,43 @@ header{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 4fr 4fr;
-
-        
         .new-card{
             grid-column-start: 1;
         }
        .a-la-francaise{
            grid-row-start: 2;
            grid-column-start: 2;
-       }
-    
-       
-       
+       } 
     }
 }
 h1{
     margin-left: 1rem;
 }
+
 .restaurant-card{
     background-color: #FFFF;
     border-radius: 20px;
     margin: 1rem;
+    box-shadow: 0 2px 6px #c5c5c5;
     &:hover{
-        transform: scale(1.02);
-        transition: 1s;
+        box-shadow: 0 2px 6px $color-primary;
     }
 
-
     img{
-       
         width: 100%;
         height: 170px;
         object-fit: cover;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        @media screen and (min-width: 800px){
+            height: 300px;
+        }
     }
+
    figcaption{
        display: grid;
        grid-template-columns: 2fr 1fr;
        padding-left: 1rem;
-       
-       
        h3{
            margin-top: 0.5rem;
            padding-bottom:0;
@@ -260,8 +236,6 @@ h1{
        }
    }
 }
-
-
 
 .heart-container{
     grid-template-columns: 1fr 1fr;
@@ -283,8 +257,7 @@ h1{
           position: absolute;
           z-index: 3;
           opacity: 0;
-          cursor: pointer;
-        
+          cursor: pointer; 
       }
       .fas{
           position: absolute;
@@ -300,8 +273,7 @@ h1{
           position: absolute;
           bottom: 15px;
            right: 30px;
-          opacity: .5;
-             
+          opacity: .5;     
       }   
 }
 
@@ -316,11 +288,13 @@ h1{
             transition: 1.5s;  
             }
     }
-
 }
 
 .new-card {
     position: relative;
+   &:hover{
+       box-shadow: 0 2px 8px $color-tertiary;
+   }
     &::before{
         content: "Nouveau";
         position: absolute;
@@ -356,9 +330,7 @@ footer{
        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         padding: 2rem 0 0 0 ; 
         }
-    }
-  
-    
+    }  
 }
 
 /*Second page*/
@@ -380,21 +352,18 @@ footer{
     position: relative;
     }
 }
+
 .menu{
         background-color: $color-background-grey;
        margin-top: -60px;
       width: 100%;
       border-top-right-radius: 30px;
       border-top-left-radius: 30px;
-      
-    
-
     &-items h3{
         margin-left: 1.5rem;
         position: relative;
         font-weight: normal;
         text-transform: uppercase;
-
         &::after{
             content: "";
             height: 3px;
@@ -404,24 +373,21 @@ footer{
             top: 25px;
             left: 0px;
         }
-
-    }
-      
+    }   
 }
+
 .menu-header{
     display: grid;
     grid-template-columns: 3fr 1fr;
     width: 100%;
-       
        h2{
            margin: .90rem 1rem;
        }
-     
     .heart-container{
         padding: 0 ;
-
     }
 }
+
 .menu-items__choice{
     display: flex;
     flex-wrap: wrap;
@@ -438,16 +404,16 @@ footer{
     p{
         margin: .3rem 0 .3rem .9rem;
         overflow: hidden;
-        text-overflow: ellipsis;
-        
+        text-overflow: ellipsis;   
     }
    span{
        font-weight: bold;
        margin: 1rem 1rem 0 0.5rem;
    }
 }
-@media screen and (min-width: 800px){
-.menu-items{
+
+@media screen and (min-width: 1100px){
+.menu-wraper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
@@ -475,22 +441,22 @@ footer{
     font-size: 1.5rem;
     color: #FFFF;
     border-radius: 0 15px 15px 0;
-    display: none;
-    
-    
+    display: none;   
 }
 
 .menu-items__choice{
-
     &:hover{
+        span{
+            margin: 1rem 0 0 0.5rem;
+        }
         .animation-menu{
            display: flex;
             animation: slide-left 400ms linear both;
             transform-origin: right;
             overflow: hidden;
+          
             i{
                 animation: rotation 400ms linear;
-
             }
         }
         .menu-items__choice__description{
@@ -498,23 +464,25 @@ footer{
             transition: 400ms;
         } 
     }
-
 }
+
 .first-choice{
     animation: slow-display linear 500ms;
 }
+
 .second-choice{
     animation: slow-display linear 600ms;
 }
+
 .third-choice{
     animation:slow-display linear 700ms;
 }
+
 .forth-choice{
     animation: slow-display linear 1s;
 }
 
 .order-button{
-
     @include flexbox;
     margin: 2rem 0 0 0;
 
