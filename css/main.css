@@ -97,28 +97,6 @@
   }
 }
 
-@-webkit-keyframes validated {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
-@keyframes validated {
-  0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-            transform: scaleX(1);
-  }
-}
-
 @-webkit-keyframes rotation {
   0% {
     -webkit-transform: rotate(0deg);
@@ -148,8 +126,8 @@
     width: 0%;
   }
   100% {
-    -webkit-transform: translateX(1);
-            transform: translateX(1);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     display: -webkit-box;
     display: flex;
     width: 15%;
@@ -163,8 +141,8 @@
     width: 0%;
   }
   100% {
-    -webkit-transform: translateX(1);
-            transform: translateX(1);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -339,7 +317,7 @@ header img {
           justify-content: center;
   background-color: #eaeaea;
   width: 100%;
-  font-weight: bold 0.8;
+  font-weight: bold;
 }
 
 .card__titre i {
