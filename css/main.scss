@@ -87,6 +87,7 @@ header{
     text-align: center;
     margin: 1rem 0;
     width: 100%;
+    border-top: solid 1px grey;
 
     &__titre{
         @include icon-flex;
@@ -340,7 +341,8 @@ footer{
     position: relative;
     a{
         position: absolute;
-        left: 2rem;
+        left: 1rem;
+        font-size: 1.5rem;
     }
 }
 
