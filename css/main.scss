@@ -116,7 +116,7 @@ header{
 .function{
     @include flexbox;
     h1{
-        margin-left: -30%;
+        margin-left: -40%;
         @media screen and (min-width: 800px) {
             margin-left: 0;
         }
@@ -128,6 +128,7 @@ header{
     border-radius: 20px;
     padding-left: 0;
     width: 75%;
+    margin-bottom: 3rem;
     @media screen and (min-width: 1200px) {
         flex-direction: row;
         justify-content: space-around;
@@ -184,6 +185,8 @@ header{
    justify-content: center;
    grid-template-columns: 1fr;
     background-color: $color-card;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     @media screen and (min-width: 800px)  {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -305,8 +308,13 @@ h1{
 
 footer{
     background-color: rgb(31, 31, 31);
+    padding-top: 1rem;
     margin-top: 0;
     padding-bottom: 2rem;
+
+    i{
+        padding-right: 1rem;
+    }
     ul, h2{
        margin-top: 0;
        
@@ -349,6 +357,7 @@ footer{
 .menu{
         background-color: $color-background-grey;
        margin-top: -60px;
+       padding-top: 1.5rem;
       width: 100%;
       border-top-right-radius: 30px;
       border-top-left-radius: 30px;
