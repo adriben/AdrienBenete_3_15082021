@@ -1,0 +1,45 @@
+.heart-container{
+
+    font-size: 2rem;
+    padding-left: 1rem;
+    position: relative;
+      .input-heart{
+          height: 2.1rem;
+          width: 2.1rem;
+          bottom: 20px;
+          right: 27px;
+          position: absolute;
+          z-index: 3;
+          opacity: 0;
+          cursor: pointer; 
+      }
+      .fas{
+          position: absolute;
+           background-image: linear-gradient($color-primary, $color-secondary);
+           -webkit-background-clip: text;
+           background-clip: text;
+           -webkit-text-fill-color: transparent;
+           bottom: 20px;
+           right: 30px;  
+           opacity: 0;
+      }
+      .far{
+          position: absolute;
+          bottom: 20px;
+           right: 30px;
+          opacity: .5;     
+      }   
+}
+
+.input-heart{
+    &:checked{
+        ~.far{
+            opacity: 0;
+            transition: 1.5s;         
+        }
+        ~.fas{
+            opacity: 1;
+            transition: 1.5s;  
+            }
+    }
+}

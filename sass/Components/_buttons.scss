@@ -1,0 +1,10 @@
+@import "../Utils/keyframes";
+
+
+.btn{
+    @include button; 
+    &:hover{
+        cursor: pointer;
+        @include opacity;
+    }
+}

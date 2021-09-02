@@ -1,0 +1,48 @@
+.loader{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    visibility: hidden;
+    animation: disapear 2s linear;
+    &__spinner{
+       position: relative;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        border: solid 3px transparent;
+        border-top-color: $color-primary ;
+        border-bottom-color: $color-secondary;
+        top: 30%;
+        left: 45%;
+        animation: loading 1s linear infinite;
+        &::after{
+            content: "";
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 3px solid transparent;
+            border-radius: 50px;
+            border-top-color: $color-tertiary;
+            border-bottom-color:$color-tertiary ;
+            animation: loading 2s linear reverse infinite;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            right: 18px;
+            bottom: 18px;
+            border: 3px solid;
+            border-color: transparent;
+            border-radius: 50px; 
+        }  
+    }
+}
