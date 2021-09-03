@@ -26,13 +26,13 @@
 @mixin button {
 
     border: none;
-    padding: 1rem;
+    padding: 1rem 1.5rem;
     background-image: linear-gradient(
     $color-secondary, $color-primary 
       );
     color: #fff;
     margin: 1rem 0 3rem 0;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 0px 0px 1px 1px;
 
     
