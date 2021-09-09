@@ -190,12 +190,13 @@
 .header-restaurants a {
   position: absolute;
   left: 1rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .menu-header h2 {
   font-family: "Shrikhand", cursive;
-  font-weight: normal;
+  font-weight: bold;
+  font-size: 160%;
 }
 
 .picture img {
@@ -360,23 +361,23 @@
 }
 
 .first-choice {
-  -webkit-animation: slow-display linear 500ms;
-          animation: slow-display linear 500ms;
-}
-
-.second-choice {
-  -webkit-animation: slow-display linear 600ms;
-          animation: slow-display linear 600ms;
-}
-
-.third-choice {
   -webkit-animation: slow-display linear 700ms;
           animation: slow-display linear 700ms;
 }
 
+.second-choice {
+  -webkit-animation: slow-display linear 900ms;
+          animation: slow-display linear 900ms;
+}
+
+.third-choice {
+  -webkit-animation: slow-display linear 1000ms;
+          animation: slow-display linear 1000ms;
+}
+
 .forth-choice {
-  -webkit-animation: slow-display linear 1s;
-          animation: slow-display linear 1s;
+  -webkit-animation: slow-display linear 1200ms;
+          animation: slow-display linear 1200ms;
 }
 
 .order-button {
@@ -394,10 +395,11 @@
       -ms-flex-pack: center;
           justify-content: center;
   margin: 2rem 0 0 0;
+  padding-bottom: 1.5rem;
 }
 
 .order-button .btn {
-  width: 200px;
+  width: 180px;
 }
 
 .loader {
@@ -531,6 +533,7 @@ header img {
   bottom: 20px;
   right: 30px;
   opacity: .5;
+  border-radius: 50% 50% 50% 50%;
 }
 
 .input-heart:checked ~ .far {
@@ -769,7 +772,7 @@ main {
       grid-template-columns: 1fr;
   background-color: #f8f8f8;
   padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -803,7 +806,7 @@ h2 {
   /*Carte des restaurants de la page d'acceuil*/
   background-color: #FFFF;
   border-radius: 20px;
-  margin: 1rem;
+  margin: 0.6rem 1rem;
   -webkit-box-shadow: 0 2px 6px #c5c5c5;
           box-shadow: 0 2px 6px #c5c5c5;
 }
@@ -875,9 +878,8 @@ h2 {
 
 footer {
   background-color: rgba(31, 31, 31, 0.95);
-  padding-top: 1rem;
   margin-top: 0;
-  padding-bottom: 2rem;
+  padding: 1rem 0;
 }
 
 footer i {
@@ -886,7 +888,7 @@ footer i {
 
 footer ul, footer h5 {
   margin-top: -0.2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 footer li, footer a {

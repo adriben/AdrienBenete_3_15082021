@@ -5,13 +5,14 @@
     a{
         position: absolute;
         left: 1rem;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 }
 
 .menu-header h2{
     font-family: "Shrikhand", cursive;
-    font-weight: normal;
+    font-weight: bold;
+    font-size: 160%;
 }
 
 .picture{
@@ -143,27 +144,28 @@
 }
 
 .first-choice{
-    animation: slow-display linear 500ms;
+    animation: slow-display linear 700ms;
 }
 
 .second-choice{
-    animation: slow-display linear 600ms;
+    animation: slow-display linear 900ms;
 }
 
 .third-choice{
-    animation:slow-display linear 700ms;
+    animation:slow-display linear 1000ms;
 }
 
 .forth-choice{
-    animation: slow-display linear 1s;
+    animation: slow-display linear 1200ms;
 }
 
 .order-button{
     @include flexbox;
     margin: 2rem 0 0 0;
+    padding-bottom: 1.5rem;
 
      .btn{
-         width: 200px;
+         width: 180px;
      }
 }
 

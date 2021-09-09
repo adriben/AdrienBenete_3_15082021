@@ -26,6 +26,7 @@ body{
 
 main{
     margin-bottom: 0;
+    
 }
 
 .card{                            /*carte contenant le bouton explorer et la location*/
@@ -136,7 +137,7 @@ main{
    grid-template-columns: 1fr;
     background-color: $color-card;
     padding-top: 1rem;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     @media screen and (min-width: 800px)  {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -160,7 +161,7 @@ h2{
 .restaurant-card{                 /*Carte des restaurants de la page d'acceuil*/
     background-color: #FFFF;
     border-radius: 20px;
-    margin: 1rem;
+    margin: 0.6rem 1rem;
     box-shadow: 0 2px 6px #c5c5c5;
     &:hover{
         box-shadow: 0 2px 6px $color-primary;
