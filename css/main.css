@@ -193,6 +193,11 @@
   font-size: 1.5rem;
 }
 
+.menu-header h2 {
+  font-family: "Shrikhand", cursive;
+  font-weight: normal;
+}
+
 .picture img {
   height: 300px;
   width: 100%;
@@ -262,12 +267,15 @@
           align-items: center;
   background-color: #FFFF;
   border-radius: 15px;
-  height: 4rem;
+  height: 4.3rem;
   margin: .75rem;
 }
 
 .menu-items__choice h4 {
-  margin: .9rem 0 0 .9rem;
+  margin: .3rem 0 0 .9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 105%;
 }
 
 .menu-items__choice p {
@@ -278,7 +286,7 @@
 
 .menu-items__choice span {
   font-weight: bold;
-  margin: 1rem 1rem 0 0.5rem;
+  margin: 1rem 1rem -1rem 0.5rem;
 }
 
 @media screen and (min-width: 1100px) {
@@ -325,7 +333,7 @@
 }
 
 .menu-items__choice:hover span {
-  margin: 1rem 0 0 0.5rem;
+  margin: 1rem 0 -1rem 0.5rem;
 }
 
 .menu-items__choice:hover .animation-menu {
@@ -342,6 +350,7 @@
 .menu-items__choice:hover .animation-menu i {
   -webkit-animation: rotation 400ms linear;
           animation: rotation 400ms linear;
+  font-size: 80%;
 }
 
 .menu-items__choice:hover .menu-items__choice__description {
@@ -405,6 +414,9 @@
   visibility: hidden;
   -webkit-animation: disapear 2s linear;
           animation: disapear 2s linear;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .loader__spinner {
@@ -415,8 +427,7 @@
   border: solid 3px transparent;
   border-top-color: #9356DC;
   border-bottom-color: #FF79DA;
-  top: 30%;
-  left: 45%;
+  top: 40%;
   -webkit-animation: loading 1s linear infinite;
           animation: loading 1s linear infinite;
 }
@@ -468,86 +479,6 @@ header img {
   height: 2rem;
 }
 
-@keyframes new {
-  0% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
-
-@keyframes loading {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes disapear {
-  0% {
-    visibility: hidden;
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    visibility: visible;
-  }
-}
-
-@keyframes rotation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes slide-left {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    width: 0%;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 15%;
-  }
-}
-
-@keyframes slow-display {
-  0% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 .btn {
   border: none;
   padding: 1rem 1.5rem;
@@ -556,15 +487,17 @@ header img {
   color: #fff;
   margin: 1rem 0 3rem 0;
   border-radius: 30px;
-  -webkit-box-shadow: 0px 0px 1px 1px;
-          box-shadow: 0px 0px 1px 1px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .btn:hover {
   cursor: pointer;
   opacity: 0.7;
-  -webkit-box-shadow: 0px 0px 6px;
-          box-shadow: 0px 0px 6px;
+  -webkit-box-shadow: 0, 0, 0, 0.8 6px 15px 15px;
+          box-shadow: 0, 0, 0, 0.8 6px 15px 15px;
+  -webkit-box-shadow: rgba(12, 0, 0, 0.5) 0px 8px 15px;
+          box-shadow: rgba(12, 0, 0, 0.5) 0px 8px 15px;
 }
 
 .heart-container {
@@ -630,7 +563,18 @@ body li {
 }
 
 body h2 {
-  font-family: 'Shrikhand', cursive;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+body h3 {
+  font-weight: 900;
+  font-family: 'Roboto', sans-serif;
+}
+
+body h5 {
+  font-family: "Shrikhand", cursive;
+  font-size: 120%;
   font-weight: normal;
 }
 
@@ -701,13 +645,13 @@ main {
           justify-content: center;
 }
 
-.function h1 {
+.function h2 {
   margin-left: -40%;
   margin-bottom: 0;
 }
 
 @media screen and (min-width: 800px) {
-  .function h1 {
+  .function h2 {
     margin-left: 0;
   }
 }
@@ -785,10 +729,11 @@ main {
 .functionality__element i {
   padding: 1rem;
   opacity: 0.5;
-  font-size: 120%;
+  font-size: 110%;
 }
 
 .number {
+  /*Numero violet sur la partie fonctionnement*/
   background-color: #9356DC;
   vertical-align: middle;
   text-align: center;
@@ -803,17 +748,20 @@ main {
 }
 
 #purple-store {
+  /*Icone et fond violet du troisieme bouton*/
   background-color: #f5edff;
 }
 
 #purple-store:hover {
   opacity: 0.7;
-  -webkit-box-shadow: 0px 0px 6px;
-          box-shadow: 0px 0px 6px;
+  -webkit-box-shadow: 0, 0, 0, 0.8 6px 15px 15px;
+          box-shadow: 0, 0, 0, 0.8 6px 15px 15px;
 }
 
 #purple-store i {
   color: #9356DC;
+  font-weight: bold;
+  opacity: 0.9;
 }
 
 #restaurant-container {
@@ -850,12 +798,14 @@ main {
   }
 }
 
-h1 {
+h2 {
   margin-left: 1rem;
   margin-bottom: 0.4rem;
+  font-weight: 900;
 }
 
 .restaurant-card {
+  /*Carte des restaurants de la page d'acceuil*/
   background-color: #FFFF;
   border-radius: 20px;
   margin: 1rem;
@@ -904,6 +854,7 @@ h1 {
 }
 
 .new-card {
+  /*carte avec le NOUVEAU qui clignote*/
   position: relative;
 }
 
@@ -916,19 +867,19 @@ h1 {
   content: "Nouveau";
   position: absolute;
   background-color: #99e2d0;
-  height: 1.4rem;
-  font-size: 1rem;
-  width: 4rem;
+  font-size: 80%;
+  font-weight: bold;
   color: #278870;
   top: 1rem;
+  border-radius: 3px;
   right: 1.5rem;
-  padding: .3rem;
+  padding: .4rem .6rem;
   -webkit-animation: new 2s linear infinite;
           animation: new 2s linear infinite;
 }
 
 footer {
-  background-color: #1f1f1f;
+  background-color: rgba(31, 31, 31, 0.95);
   padding-top: 1rem;
   margin-top: 0;
   padding-bottom: 2rem;
@@ -938,8 +889,9 @@ footer i {
   padding-right: 1rem;
 }
 
-footer ul, footer h2 {
+footer ul, footer h5 {
   margin-top: -0.2rem;
+  margin-bottom: 1rem;
 }
 
 footer li, footer a {

@@ -9,6 +9,11 @@
     }
 }
 
+.menu-header h2{
+    font-family: "Shrikhand", cursive;
+    font-weight: normal;
+}
+
 .picture{
     img{
     height: 300px;
@@ -63,10 +68,13 @@
     align-items: center;
     background-color: #FFFF;
     border-radius: 15px;
-    height: 4rem;
+    height: 4.3rem;
     margin: .75rem;
     h4{
-        margin: .9rem 0 0 .9rem;
+        margin: .3rem 0 0 .9rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 105%;  
     }
     p{
         margin: .3rem 0 .3rem .9rem;
@@ -75,7 +83,7 @@
     }
    span{
        font-weight: bold;
-       margin: 1rem 1rem 0 0.5rem;
+       margin: 1rem 1rem -1rem 0.5rem;
    }
 }
 
@@ -114,7 +122,7 @@
 .menu-items__choice{
     &:hover{
         span{
-            margin: 1rem 0 0 0.5rem;
+            margin: 1rem 0 -1rem 0.5rem;
         }
         .animation-menu{
            display: flex;
@@ -124,6 +132,7 @@
           
             i{
                 animation: rotation 400ms linear;
+                font-size: 80%;
             }
         }
         .menu-items__choice__description{

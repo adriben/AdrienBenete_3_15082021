@@ -13,29 +13,24 @@
 
 @mixin opacity {
     opacity: 0.7;
-    box-shadow: 0px 0px 6px;
-    
+    box-shadow: (0, 0, 0, 0.8) 6px 15px 15px;
 }
+
 @mixin  flexbox-bigscreen {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    
+    flex-wrap: nowrap; 
 }
 
 @mixin button {
-
     border: none;
     padding: 1rem 1.5rem;
     background-image: linear-gradient(
-    $color-secondary, $color-primary 
-      );
+    $color-secondary, $color-primary);
     color: #fff;
     margin: 1rem 0 3rem 0;
     border-radius: 30px;
-    box-shadow: 0px 0px 1px 1px;
-
-    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @mixin icon-flex{

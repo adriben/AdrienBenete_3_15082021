@@ -1,20 +1,18 @@
 footer{
-    background-color: rgb(31, 31, 31);
+    background-color: rgba(31, 31, 31, 0.95);
     padding-top: 1rem;
     margin-top: 0;
     padding-bottom: 2rem;
-
     i{
         padding-right: 1rem;
     }
-    ul, h2{
-       margin-top: -0.2rem;
-       
+    ul, h5{
+       margin-top: -0.2rem; 
+       margin-bottom: 1rem; 
     }
     li, a{
         color: #FFFF;
         margin-top: .7rem;
-        
     }
    @media screen and (min-width: 700px) {
        ul{

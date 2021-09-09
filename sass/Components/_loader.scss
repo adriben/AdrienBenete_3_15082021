@@ -9,6 +9,7 @@
     display: flex;
     visibility: hidden;
     animation: disapear 2s linear;
+    justify-content: center;
     &__spinner{
        position: relative;
         width: 50px;
@@ -17,8 +18,7 @@
         border: solid 3px transparent;
         border-top-color: $color-primary ;
         border-bottom-color: $color-secondary;
-        top: 30%;
-        left: 45%;
+        top: 40%;
         animation: loading 1s linear infinite;
         &::after{
             content: "";
