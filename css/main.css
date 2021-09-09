@@ -494,8 +494,6 @@ header img {
 .btn:hover {
   cursor: pointer;
   opacity: 0.7;
-  -webkit-box-shadow: 0, 0, 0, 0.8 6px 15px 15px;
-          box-shadow: 0, 0, 0, 0.8 6px 15px 15px;
   -webkit-box-shadow: rgba(12, 0, 0, 0.5) 0px 8px 15px;
           box-shadow: rgba(12, 0, 0, 0.5) 0px 8px 15px;
 }
@@ -569,7 +567,6 @@ body h2 {
 
 body h3 {
   font-weight: 900;
-  font-family: 'Roboto', sans-serif;
 }
 
 body h5 {
@@ -720,8 +717,8 @@ main {
 
 .functionality__element:hover {
   background: #fdfdfd;
-  -webkit-box-shadow: 0px 4px 6px 6px rgba(153, 151, 151, 0.3);
-          box-shadow: 0px 4px 6px 6px rgba(153, 151, 151, 0.3);
+  -webkit-box-shadow: rgba(12, 0, 0, 0.5) 0px 8px 15px;
+          box-shadow: rgba(12, 0, 0, 0.5) 0px 8px 15px;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -754,8 +751,6 @@ main {
 
 #purple-store:hover {
   opacity: 0.7;
-  -webkit-box-shadow: 0, 0, 0, 0.8 6px 15px 15px;
-          box-shadow: 0, 0, 0, 0.8 6px 15px 15px;
 }
 
 #purple-store i {
