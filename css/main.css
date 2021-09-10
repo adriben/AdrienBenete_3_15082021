@@ -334,7 +334,7 @@
 }
 
 .menu-items__choice:hover span {
-  margin: 1rem 0 -1rem 0.5rem;
+  margin: 1rem 0 -1rem 0;
 }
 
 .menu-items__choice:hover .animation-menu {
@@ -355,7 +355,7 @@
 }
 
 .menu-items__choice:hover .menu-items__choice__description {
-  width: 70%;
+  width: 74%;
   -webkit-transition: 400ms;
   transition: 400ms;
 }
@@ -533,7 +533,6 @@ header img {
   bottom: 20px;
   right: 30px;
   opacity: .5;
-  border-radius: 50% 50% 50% 50%;
 }
 
 .input-heart:checked ~ .far {
