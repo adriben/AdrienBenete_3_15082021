@@ -1,8 +1,8 @@
-.heart-container{ 
+.heart-container{ /*DIV contenant les coeurs et la checkbox*/
     font-size: 2rem;
     padding-left: 1rem;
     position: relative;
-      .input-heart{
+      .input-heart{  /*CHECKBOX*/
           height: 2.1rem;
           width: 2.1rem;
           bottom: 20px;
@@ -12,7 +12,7 @@
           opacity: 0;
           cursor: pointer; 
       }
-      .fas{
+      .fas{  /*COEUR PLEIN*/
           position: absolute;
            background-image: linear-gradient($color-primary, $color-secondary);
            -webkit-background-clip: text;
@@ -24,7 +24,7 @@
            
            
       }
-      .far{
+      .far{ /*COEUR VIDE*/
           position: absolute;
           bottom: 20px;
            right: 30px;

@@ -10,7 +10,7 @@
     }
 }
 
-@keyframes loading {
+@keyframes loading {  /*Animation du loader*/
     0%{
         transform: rotate(0deg);
     }
@@ -33,7 +33,7 @@
      }
 }
   
-@keyframes rotation {
+@keyframes rotation { 
      0%{
          transform: rotate(0deg);
      }
@@ -42,7 +42,7 @@
       }
   }
 
-@keyframes slide-left {
+@keyframes slide-left {  /*Animation de la coche de validation*/
     0% {
       transform: translateX(0);
               width: 0%;          
@@ -54,7 +54,7 @@
     }
 }
 
-@keyframes slow-display {
+@keyframes slow-display {  /*Animation de l apparition progressive des menus*/
     0%{
         transform: translateY(100px);
         opacity: 0;
